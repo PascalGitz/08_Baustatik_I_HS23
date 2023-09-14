@@ -183,7 +183,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, sharp corners, interior hidden, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, frame hidden, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, enhanced, interior hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
 
 \hypertarget{testat-1---aufgabenstellung}{%
 \section{Testat 1 -
@@ -193,10 +193,7 @@ Aufgabenstellung}\label{testat-1---aufgabenstellung}}
 \subsection{Lagerkraft- und
 Schnittgrössen}\label{lagerkraft--und-schnittgruxf6ssen}}
 
-Gegeben ist das statische System in Abbildung~\ref{fig-system}. Die
-Einwirkungen sind auf charakteristischem Niveau \footnote{Charakteristisch
-  bedeutet frei von Sicherheitsbeiwerten. Für diese Testatübung ist dies
-  nicht relevant.}.
+Gegeben ist das statische System in Abbildung~\ref{fig-system}.
 
 \begin{figure}[H]
 
@@ -215,7 +212,8 @@ Gesucht:
 \tightlist
 \item
   Zeichnen Sie ein Schnittkörperdiagramm des gesamten statischen Systems
-  (SKD) und bestimmen Sie die Lagerkraftgrössen in \(A\) und \(B\).
+  (SKD) und bestimmen Sie die Lagerkraftgrössen in \(\text{A}\) und
+  \(\text{B}\).
 \item
   Kontrollieren Sie Ihre Berechnung der Lagerkraftgrössen.
 \item
@@ -252,38 +250,38 @@ Zuerst wird \(B_z\) ermittelt, dies kann durch Gleichgewicht der Momente
 um Punkt \(A\) geschehen.
 
 \begin{equation}\protect\hypertarget{eq-ggw_M_A}{}{
-\sum_A^\curvearrowleft M_y = 0
+\sum_A^{\curvearrowleft^+} M_y = 0
 }\label{eq-ggw_M_A}\end{equation}
 
 \begin{equation}0 = B_{z} 10 \text{m} - F_{1} \cdot 1.5 \text{m} + F_{2} \cdot 3 \text{m} - q_{z} 5.2 \text{m} 7.4 \text{m}\end{equation}
 
 \begin{equation}B_{z} = 3.848 q_{z} \text{m} + 0.15 F_{1} - 0.3 F_{2}\end{equation}
 
-\begin{equation}B_{z} = 72154.0 \text{N}\end{equation}
+\begin{equation}B_{z} = 64.21 \text{k} \text{N}\end{equation}
 
 Anhand des Momentengleichgewichts um Punkt \(B\) kann \(A_z\) ermittelt
 werden. \begin{equation}\protect\hypertarget{eq-ggw_M_B}{}{
-\sum_B^\curvearrowleft M_y = 0
+\sum_B^{\curvearrowleft^+} M_y = 0
 }\label{eq-ggw_M_B}\end{equation}
 
 \begin{equation}0 = - A_{z} 10 \text{m} + F_{1} \cdot 8.5 \text{m} - F_{2} \cdot 7 \text{m} + q_{z} 5.2 \text{m} 2.6 \text{m}\end{equation}
 
 \begin{equation}A_{z} = 1.352 q_{z} \text{m} + 0.85 F_{1} - 0.7 F_{2}\end{equation}
 
-\begin{equation}A_{z} = 446.0 \text{N}\end{equation}
+\begin{equation}A_{z} = 4.79 \text{k} \text{N}\end{equation}
 
 Die horizontale Auflagerreaktion \(A_x\) kann durch Gleichgewicht der
 horizontalen Kräfte ermittelt werden:
 
 \begin{equation}\protect\hypertarget{eq-sum_fx}{}{
-\sum^\rightarrow F_x = 0
+\sum^{\rightarrow^+} F_x = 0
 }\label{eq-sum_fx}\end{equation}
 
 \begin{equation}0 = A_{x} + F_{3}\end{equation}
 
 \begin{equation}A_{x} = - F_{3}\end{equation}
 
-\begin{equation}A_{x} = - 50000.0 \text{N}\end{equation}
+\begin{equation}A_{x} = - 50.0 \text{k} \text{N}\end{equation}
 
 \hypertarget{kontrolle-der-lagerkraftgruxf6ssen}{%
 \subsection{Kontrolle der
@@ -294,12 +292,12 @@ Momentengleichgewichts bestimmt worden sind, bleibt die Summe aller
 Kräfte in \(z\)-Richtung zur Kontrolle der Grössen.
 
 \begin{equation}\protect\hypertarget{eq-ggw_fz}{}{
-\sum^\uparrow F_z = 0
+{\downarrow^+}\sum F_z = 0
 }\label{eq-ggw_fz}\end{equation}
 
 \begin{equation}0 = 5.2 q_{z} \text{m} - A_{z} - B_{z} + F_{1} - F_{2}\end{equation}
 
-\begin{equation}0 = 72600.0 \text{N} - A_{z} - B_{z}\end{equation}
+\begin{equation}0 = 69.0 \text{k} \text{N} - A_{z} - B_{z}\end{equation}
 
 \begin{equation}0 = 0\end{equation}
 
@@ -348,38 +346,38 @@ Für das System in Abbildung~\ref{fig-skd_4_pos}, die Bestimmung der
 Querkraft:
 
 \begin{equation}\protect\hypertarget{eq-ggw_fz2}{}{
-\sum_{x=4m}^\uparrow F_z = 0
+{\downarrow^+}\sum_{x=4m} F_z = 0
 }\label{eq-ggw_fz2}\end{equation}
 
-\begin{equation}0 = A_{z} - F_{1} + F_{2} - V_{z}{\left(4 \text{m} \right)}\end{equation}
+\begin{equation}0 = - A_{z} + F_{1} - F_{2} + V_{z}{\left(4 \text{m} \right)}\end{equation}
 
 \begin{equation}V_{z}{\left(4 \text{m} \right)} = A_{z} - F_{1} + F_{2}\end{equation}
 
-\begin{equation}V_{z}{\left(4 \text{m} \right)} = 47446.0 \text{N}\end{equation}
+\begin{equation}V_{z}{\left(4 \text{m} \right)} = 39.79 \text{k} \text{N}\end{equation}
 
 Die Bestimmung der Normalkraft:
 
 \begin{equation}\protect\hypertarget{eq-sum_fx2}{}{
-\sum_{x=4m}^\rightarrow F_x = 0
+\sum_{x=4m}^{\rightarrow^+} F_x = 0
 }\label{eq-sum_fx2}\end{equation}
 
 \begin{equation}0 = A_{x} + N_{x}{\left(4 \text{m} \right)}\end{equation}
 
 \begin{equation}N_{x}{\left(4 \text{m} \right)} = - A_{x}\end{equation}
 
-\begin{equation}N_{x}{\left(4 \text{m} \right)} = 50000.0 \text{N}\end{equation}
+\begin{equation}N_{x}{\left(4 \text{m} \right)} = 50.0 \text{k} \text{N}\end{equation}
 
 Letztlich die Bestimmung des Biegemoments:
 
 \begin{equation}\protect\hypertarget{eq-ggw_M_B_4m}{}{
-\sum_{x=4m}^\curvearrowleft M_y = 0
+\sum_{x=4m}^{\curvearrowleft^+} M_y = 0
 }\label{eq-ggw_M_B_4m}\end{equation}
 
 \begin{equation}0 = - A_{z} 4.0 \text{m} + F_{1} \cdot 2.5 \text{m} - F_{2} \cdot 1.0 \text{m} + M_{y}{\left(4 \text{m} \right)}\end{equation}
 
 \begin{equation}M_{y}{\left(4 \text{m} \right)} = 0.5 \cdot \left(8.0 A_{z} - 5.0 F_{1} + 2.0 F_{2}\right) \text{m}\end{equation}
 
-\begin{equation}M_{y}{\left(4 \text{m} \right)} = 26284.0 \text{m} \text{N}\end{equation}
+\begin{equation}M_{y}{\left(4 \text{m} \right)} = 31.66 \text{k} \text{m} \text{N}\end{equation}
 
 
 

@@ -183,7 +183,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, boxrule=0pt, breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, interior hidden, breakable, enhanced, borderline west={3pt}{0pt}{shadecolor}, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
 
 \hypertarget{testat-2---aufgabenstellung}{%
 \section{Testat 2 -
@@ -193,10 +193,7 @@ Aufgabenstellung}\label{testat-2---aufgabenstellung}}
 \subsection{Lagerkraftgrössen und Zustandslinien der
 Schnittgrössen}\label{lagerkraftgruxf6ssen-und-zustandslinien-der-schnittgruxf6ssen}}
 
-Gegeben ist das statische System in Abbildung~\ref{fig-system}. Die
-Einwirkungen sind auf charakteristischem Niveau \footnote{Charakteristisch
-  bedeutet frei von Sicherheitsbeiwerten. Für diese Testatübung ist dies
-  nicht relevant.}.
+Gegeben ist das statische System in Abbildung~\ref{fig-system}.
 
 \begin{figure}[H]
 
@@ -215,13 +212,14 @@ Gesucht:
 \tightlist
 \item
   Zeichnen Sie ein Schnittkörperdiagramm des gesamten statischen Systems
-  (SKD) und bestimmen Sie die Lagerkraftgrössen in \(A\) und \(B\)
+  (SKD) und bestimmen Sie die Lagerkraftgrössen in \(\text{A}\) und
+  \(\text{B}\)
 \item
   Kontrollieren Sie Ihre Berechnung der Lagerkraftgrössen
 \item
   Bestimmen Sie die Zustandslinien der Schnittgrössen Normalkraft
   \(N_x\), Querkraft \(V_z\) und Biegemoment \(M_y\). Kennzeichnen Sie
-  die Verläufe (linear, quadratisch).
+  die Verläufe (konstant, quadratisch, kubisch).
 \end{itemize}
 
 \newpage{}
@@ -253,27 +251,27 @@ Zuerst wird \(B_z\) ermittelt, dies kann durch Gleichgewicht der Momente
 um Punkt \(A\) geschehen.
 
 \begin{equation}\protect\hypertarget{eq-ggw_M_A}{}{
-\sum_A^\curvearrowleft M_y = 0
+\sum_A^{\curvearrowleft^+} M_y = 0
 }\label{eq-ggw_M_A}\end{equation}
 
 \begin{equation}0 = B_{z} 10 \text{m} + F_{1} \cdot 1.8 \text{m} - F_{2} \cdot 3.8 \text{m} + F_{3} \cdot 3 \text{m} - q_{z} 3.0 \sqrt{2} \text{m} 8.5 \text{m}\end{equation}
 
 \begin{equation}B_{z} = 3.61 q_{z} \text{m} - 0.18 F_{1} + 0.38 F_{2} - 0.3 F_{3}\end{equation}
 
-\begin{equation}B_{z} = 45727.0 \text{N}\end{equation}
+\begin{equation}B_{z} = 45.7 \text{k} \text{N}\end{equation}
 
 Die horizontale Auflagerreaktion \(A_x\) kann durch Gleichgewicht der
 horizontalen Kräfte ermittelt werden:
 
 \begin{equation}\protect\hypertarget{eq-sum_fx}{}{
-\sum^\rightarrow F_x = 0
+\sum^{\rightarrow^+} F_x = 0
 }\label{eq-sum_fx}\end{equation}
 
 \begin{equation}0 = A_{x} + F_{3}\end{equation}
 
 \begin{equation}A_{x} = - F_{3}\end{equation}
 
-\begin{equation}A_{x} = - 50000.0 \text{N}\end{equation}
+\begin{equation}A_{x} = - 50.0 \text{k} \text{N}\end{equation}
 
 Anhand des Momentengleichgewichts um Punkt \(B\) kann \(A_z\) ermittelt
 werden. Da die beiden Auflager nicht auf einer Ebene liegen, fliesst
@@ -281,14 +279,14 @@ werden. Da die beiden Auflager nicht auf einer Ebene liegen, fliesst
 Reaktionskraft zuerst bestimmt.
 
 \begin{equation}\protect\hypertarget{eq-ggw_M_B}{}{
-\sum_B^\curvearrowleft M_y = 0
+\sum_B^{\curvearrowleft^+} M_y = 0
 }\label{eq-ggw_M_B}\end{equation}
 
 \begin{equation}0 = - A_{x} 3 \text{m} - A_{z} 10 \text{m} - F_{1} \cdot 8.2 \text{m} + F_{2} \cdot 6.2 \text{m} + q_{z} 3 \sqrt{2} \text{m} 1.5 \text{m}\end{equation}
 
 \begin{equation}A_{z} = 0.636 q_{z} \text{m} - 0.3 A_{x} - 0.82 F_{1} + 0.62 F_{2}\end{equation}
 
-\begin{equation}A_{z} = 31670.0 \text{N}\end{equation}
+\begin{equation}A_{z} = 31.7 \text{k} \text{N}\end{equation}
 
 \hypertarget{kontrolle-der-lagerkraftgruxf6ssen}{%
 \subsection{Kontrolle der
@@ -299,12 +297,12 @@ Momentengleichgewichts bestimmt worden sind, bleibt die Summe aller
 Kräfte in \(z\)-Richtung zur Kontrolle der Grössen.
 
 \begin{equation}\protect\hypertarget{eq-ggw_fz}{}{
-\sum^\uparrow F_z = 0
+{\downarrow^+}\sum F_z = 0
 }\label{eq-ggw_fz}\end{equation}
 
 \begin{equation}0 = 3 \sqrt{2} q_{z} \text{m} - A_{z} - B_{z} - F_{1} + F_{2}\end{equation}
 
-\begin{equation}0 = 18000.0 \text{N} + 42000.0 \sqrt{2} \text{N} - A_{z} - B_{z}\end{equation}
+\begin{equation}0 = 18.0 \text{k} \text{N} + 42.0 \sqrt{2} \text{k} \text{N} - A_{z} - B_{z}\end{equation}
 
 \begin{equation}0 = 0\end{equation}
 
@@ -358,20 +356,20 @@ entspricht der negativen Stabseite, da dies durch die Richtung von
 
 \begin{equation}V_{z}{\left(B \right)} = - B_{z} \cos{\left(\alpha \right)} - F_{3} \cos{\left(\alpha \right)}\end{equation}
 
-\begin{equation}V_{z}{\left(B \right)} = - 67690.0 \text{N}\end{equation}
+\begin{equation}V_{z}{\left(B \right)} = - 67.7 \text{k} \text{N}\end{equation}
 
 Anschliessend nimmt die Querkraft durch die Streckenlast \(q_z\) ab.
 Auch diese gilt es in Stabrichtung zu transformieren.
 
 \begin{equation}V_{z}{\left(7.0 \text{m} \right)} = q_{z} \cos{\left(\alpha \right)} 3.0 \sqrt{2} \text{m} + V_{z}{\left(B \right)}\end{equation}
 
-\begin{equation}V_{z}{\left(7.0 \text{m} \right)} = - 25690.0 \text{N}\end{equation}
+\begin{equation}V_{z}{\left(7.0 \text{m} \right)} = - 25.7 \text{k} \text{N}\end{equation}
 
 Im geraden Bereich werden die Kräfte anhand des Gleichgewichts in
 \(z\)-Richtung ermittelt.
 
 \begin{equation}\protect\hypertarget{eq-ggw_fz_skd}{}{
-\sum^\uparrow F_z = 0
+{\downarrow^+}\sum F_z = 0
 }\label{eq-ggw_fz_skd}\end{equation}
 
 Für das SKD in Abbildung~\ref{fig-skd_3}:
@@ -387,11 +385,11 @@ positivem Schnittufer}
 
 \end{figure}
 
-\begin{equation}0 = A_{z} + F_{1} - F_{2} - V_{z}{\left(7.0 \text{m} \right)}\end{equation}
+\begin{equation}0 = - A_{z} - F_{1} + F_{2} + V_{z}{\left(7.0 \text{m} \right)}\end{equation}
 
 \begin{equation}V_{z}{\left(7.0 \text{m} \right)} = A_{z} + F_{1} - F_{2}\end{equation}
 
-\begin{equation}V_{z}{\left(7.0 \text{m} \right)} = 13670.0 \text{N}\end{equation}
+\begin{equation}V_{z}{\left(7.0 \text{m} \right)} = 13.7 \text{k} \text{N}\end{equation}
 
 Für das SKD in Abbildung~\ref{fig-skd_2}:
 
@@ -406,11 +404,11 @@ mit positivem Schnittufer}
 
 \end{figure}
 
-\begin{equation}0 = A_{z} + F_{1} - V_{z}{\left(3.8 \text{m} \right)}\end{equation}
+\begin{equation}0 = - A_{z} - F_{1} + V_{z}{\left(3.8 \text{m} \right)}\end{equation}
 
 \begin{equation}V_{z}{\left(3.8 \text{m} \right)} = A_{z} + F_{1}\end{equation}
 
-\begin{equation}V_{z}{\left(3.8 \text{m} \right)} = 48670.0 \text{N}\end{equation}
+\begin{equation}V_{z}{\left(3.8 \text{m} \right)} = 48.7 \text{k} \text{N}\end{equation}
 
 Für das SKD in Abbildung~\ref{fig-skd_1}:
 
@@ -425,11 +423,11 @@ mit positivem Schnittufer}
 
 \end{figure}
 
-\begin{equation}0 = A_{z} - V_{z}{\left(1.8 \text{m} \right)}\end{equation}
+\begin{equation}0 = - A_{z} + V_{z}{\left(1.8 \text{m} \right)}\end{equation}
 
 \begin{equation}V_{z}{\left(1.8 \text{m} \right)} = A_{z}\end{equation}
 
-\begin{equation}V_{z}{\left(1.8 \text{m} \right)} = 31670.0 \text{N}\end{equation}
+\begin{equation}V_{z}{\left(1.8 \text{m} \right)} = 31.7 \text{k} \text{N}\end{equation}
 
 \begin{figure}[H]
 
@@ -459,7 +457,7 @@ Die Zustandslinien der Biegemomente können anhand der bereits
 verwendeten Schnittkörperdiagramme durch Gleichgewicht ermittelt werden.
 
 \begin{equation}\protect\hypertarget{eq-ggw_M_skd}{}{
-\sum^\curvearrowleft M_y = 0
+\sum^{\curvearrowleft^+} M_y = 0
 }\label{eq-ggw_M_skd}\end{equation}
 
 Für das SKD in Abbildung~\ref{fig-skd_1}:
@@ -468,19 +466,19 @@ Für das SKD in Abbildung~\ref{fig-skd_1}:
 
 \begin{equation}M_{y}{\left(1.8 \text{m} \right)} = 1.8 A_{z} \text{m}\end{equation}
 
-\begin{equation}M_{y}{\left(1.8 \text{m} \right)} = 57005.0 \text{m} \text{N}\end{equation}
+\begin{equation}M_{y}{\left(1.8 \text{m} \right)} = 57.0 \text{k} \text{m} \text{N}\end{equation}
 
 Für das SKD in Abbildung~\ref{fig-skd_2}:
 
 \begin{equation}0 = - A_{z} 3.8 \text{m} - F_{1} \cdot 2.0 \text{m} + M_{y}{\left(3.8 \text{m} \right)}\end{equation}
 
-\begin{equation}M_{y}{\left(3.8 \text{m} \right)} = 154344.0 \text{m} \text{N}\end{equation}
+\begin{equation}M_{y}{\left(3.8 \text{m} \right)} = 154.0 \text{k} \text{m} \text{N}\end{equation}
 
 Für das SKD in Abbildung~\ref{fig-skd_3}:
 
 \begin{equation}0 = - A_{z} 7.0 \text{m} - F_{1} \cdot 5.2 \text{m} + F_{2} \cdot 3.2 \text{m} + M_{y}{\left(7.0 \text{m} \right)}\end{equation}
 
-\begin{equation}M_{y}{\left(7.0 \text{m} \right)} = 198087.0 \text{m} \text{N}\end{equation}
+\begin{equation}M_{y}{\left(7.0 \text{m} \right)} = 198.0 \text{k} \text{m} \text{N}\end{equation}
 
 Für das Biegemoment gilt, im Eckpunkt ist dies für den geraden Stab,
 sowie für den geneigten Stab identisch. Dazu ist bekannt, dass beim
@@ -512,7 +510,7 @@ Für den geraden Stab:
 
 \begin{equation}N_{x}{\left(5 \text{m} \right)} = - A_{x}\end{equation}
 
-\begin{equation}N_{x}{\left(5 \text{m} \right)} = 50000.0 \text{N}\end{equation}
+\begin{equation}N_{x}{\left(5 \text{m} \right)} = 50.0 \text{k} \text{N}\end{equation}
 
 Am Auflagerpunkt \(B\):
 
@@ -531,7 +529,7 @@ mit negativem Schnittufer}
 
 \begin{equation}N_{x}{\left(B \right)} = \left(- B_{z} + F_{3}\right) \sin{\left(\alpha \right)}\end{equation}
 
-\begin{equation}N_{x}{\left(B \right)} = 3021.2 \text{N}\end{equation}
+\begin{equation}N_{x}{\left(B \right)} = 3.02 \text{k} \text{N}\end{equation}
 
 Nach der bestimmten Normalkraft in \(B\) kann anhand der Streckenlast
 diese bis zum Eckpunkt \emph{aufgebaut} werden:
@@ -548,7 +546,7 @@ diese bis zum Eckpunkt \emph{aufgebaut} werden:
 
 \begin{equation}N_{x}{\left(7.0 \text{m} \right)} = q_{z} \sin{\left(\alpha \right)} 3 \sqrt{2} \text{m} + N_{x}{\left(B \right)}\end{equation}
 
-\begin{equation}N_{x}{\left(7.0 \text{m} \right)} = 45021.0 \text{N}\end{equation}
+\begin{equation}N_{x}{\left(7.0 \text{m} \right)} = 45.0 \text{k} \text{N}\end{equation}
 
 \begin{figure}[H]
 
