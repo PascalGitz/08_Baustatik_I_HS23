@@ -1,0 +1,13 @@
+PRGRID=Fagus-8 - Version 1.00
+OBJECT=FEM
+POSITION=Testat_3
+USERID=Hochschule Technik+Architektur Luzern
+INITIALS=Pascal Gitz
+TDLGTEILQSUMRISS=BaseObject.TeilQSTypeIndex=2.0;BaseObject.Name=C1;BaseObject.TeilQSParametrisiert=0;BaseObject.BstfSelIdx=0;BaseObject.FaserRichtIdx=0;BaseObject.Active=1;BaseObject.BewModell=1;BaseObject.ElementWithEndbars=0;BaseObject.BewehrungsLaenge=0.0;BaseObject.FlaecheTyp=1;BaseObject.Stabdurchmesser=0.0140000000000000003;BaseObject.BewehrungsFlaeche=0.00015393804002589989;BaseObject.StabDurchmesserIndex=-1;BaseObject.AnordnungTyp=1;BaseObject.Stabanzahl=-1;BaseObject.StababstandGeg=0.149999999999999994;BaseObject.StababstandEff=0.0;BaseObject.GeomAdaptIdx=2;BaseObject.BewehrungsBemessungsBasisTypIndex=1;BaseObject.InitialBewehrungsFlaeche=0.00010000000000000001;BaseObject.BewehrungsBemessungsTypIndex=3;BaseObject.ShowReinfArea=1;BaseObject.ShowBezeichner=0;BaseObject.ShowMaterial=0;BaseObject.ShowDiameter=1;BaseObject.ShowReinfSpacing=1;BaseObject.CheckInsideMaster=0;BaseObject.CheckMaster=0;BaseObject.ActiveForDesign=1;
+TOUTPUT_LASTACTIVEPATH=Table7
+TOUTPUT_PRINTACTUALSERIES=F
+TOUTPUT_PRINTACTUAL=F
+LAST_CROSSSECTION=QS.FGI
+CHECKAREATOLERANCE=0.00100000000000000002
+BEWDIAMS=600,800,1000,1200,1400,1600,1800,2000,2200,2600,3000,3400,4000
+BUEGELDIAMS=600,800,1000,1200,1400

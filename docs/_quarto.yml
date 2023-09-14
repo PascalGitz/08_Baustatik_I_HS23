@@ -1,0 +1,32 @@
+
+format:
+  pdf:
+    include-in-header: ..\src\utils\hslu_style.sty
+    bibliography: ..\literatur\literatur.bib
+  # Dokument
+    documentclass: scrartcl
+    toc-depth: 3
+    lang: de
+    keep-tex: true
+
+
+  # Figuren
+    fig-pos: 'H'
+    fig-format: svg
+  
+  # Verlinkungen
+    csl: diabetologia.csl
+    link-citations: True
+  
+  # Tabellen
+    tbl-colwidths: [50,50]
+    
+  # Code
+    execute:
+      echo: false
+      warning: false
+  
+  # Font
+    mainfont: Palatino Linotype
+    fontsize: 12pt
+    classoption: egregdoesnotlikesansseriftitles
