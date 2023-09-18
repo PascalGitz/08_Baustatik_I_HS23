@@ -13,12 +13,15 @@ import matplotlib.patches as patches
 
 
 ## Eingabewerte der gegebenen Kraft
-F= 800.24 #[Krafteinheit]
-phi_F= 0 # in Grad von Richtung x aus positiv zur Richtung y
+F= 1000 #[Krafteinheit]
+phi_F= 34 # in Grad von Richtung x aus positiv zur Richtung y
 
 ## Gewünschte Richtungswinkel zur Richtung a und b der zerlegten Kraft
 phi_a= 28 # in Grad von Richtung x aus positiv zur Richtung y
 phi_b= 69 # in Grad von Richtung x aus positiv zur Richtung y
+
+
+
 
 ## Berechnete Komponenten F_a und F_b der zerlegten Kraft
 F_a = F/(np.cos(phi_a*np.pi/180)*np.sin(phi_b*np.pi/180) - np.cos(phi_b*np.pi/180)*np.sin(phi_a*np.pi/180)) * (np.sin(phi_b*np.pi/180)*np.cos(phi_F*np.pi/180) - np.cos(phi_b*np.pi/180)*np.sin(phi_F*np.pi/180))
@@ -60,8 +63,14 @@ ax.add_patch(patches.Wedge(center=(0, 0), r=circle_radius, theta1=0, theta2=phi_
 ax.add_patch(patches.Wedge(center=(0, 0), r=circle_radius, theta1=0, theta2=phi_b, color='0.5', alpha=0.3))
 
 # Plotgrenzen
-ax.set_xlim(min(F,F_a,F_b)*1.1, max(F, F_a, F_b)*1.1)
-ax.set_ylim(min(F,F_a,F_b)*1.1, max(F, F_a, F_b)*1.1)
+
+if min(F,F_a,F_b) <= 0:
+    ax.set_xlim(min(F,F_a,F_b)*1.1, max(F, F_a, F_b)*1.1)
+    ax.set_ylim(min(F,F_a,F_b)*1.1, max(F, F_a, F_b)*1.1)
+
+else:
+    ax.set_xlim(0, max(F, F_a, F_b)*1.1)
+    ax.set_ylim(0, max(F, F_a, F_b)*1.1)
 
 # Optional: Beschriften Sie die Achsen
 ax.set_xlabel('X-Achse')
