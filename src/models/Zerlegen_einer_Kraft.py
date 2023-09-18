@@ -13,12 +13,12 @@ import matplotlib.patches as patches
 
 
 ## Eingabewerte der gegebenen Kraft
-F= 1000 #[Krafteinheit]
-phi_F= 34 # in Grad von Richtung x aus positiv zur Richtung y
+F= 1 #[Krafteinheit]
+phi_F= 70 # in Grad von Richtung x aus positiv zur Richtung y
 
 ## Gewünschte Richtungswinkel zur Richtung a und b der zerlegten Kraft
-phi_a= 28 # in Grad von Richtung x aus positiv zur Richtung y
-phi_b= 69 # in Grad von Richtung x aus positiv zur Richtung y
+phi_a= 0 # in Grad von Richtung x aus positiv zur Richtung y
+phi_b= 90 # in Grad von Richtung x aus positiv zur Richtung y
 
 
 
@@ -75,7 +75,7 @@ else:
 # Optional: Beschriften Sie die Achsen
 ax.set_xlabel('X-Achse')
 ax.set_ylabel('Y-Achse')
-
+ax.set_aspect('equal')
 plt.legend()
 plt.grid()
 plt.show()
